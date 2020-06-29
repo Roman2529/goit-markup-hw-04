@@ -117,6 +117,8 @@ ul {
   font-size: 14px;
   line-height: 1.14;
 }
+.adress-link.icon-mail {
+}
 .adress-link:hover,
 .adress-link:focus {
   color: var(--accent-color);
@@ -130,11 +132,22 @@ ul {
 .hero {
   letter-spacing: 0.06em;
   text-align: center;
+  height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding: 200px 452px;
-  background-color: blue;
+}
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../img/logo-img.jpg);
+  background-color: rgba(47, 48, 58, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-block {
   max-width: 696px;
@@ -207,11 +220,6 @@ ul {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.advantages-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  display: none;
-}
 .advantages-text {
   font-size: 14px;
   line-height: 1.71;
@@ -220,7 +228,26 @@ ul {
 }
 .advantages-item {
   width: 270px;
-  list-style: none;
+}
+.advantages-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--portfolio-button);
+}
+.advantages-item:nth-child(1)::before {
+  background-image: url(../img/antenna1.svg);
+}
+.advantages-item:nth-child(2)::before {
+  background-image: url(../img/clock1.svg);
+}
+.advantages-item:nth-child(3)::before {
+  background-image: url(../img/diagram1.svg);
+}
+.advantages-item:nth-child(4)::before {
+  background-image: url(../img/astronaut1.svg);
 }
 
 /*specialty*/
@@ -229,11 +256,15 @@ ul {
   margin-right: 30px;
 }
 .specialty-item {
-  width: 370px;
+  max-width: 370px;
 }
 .specialty-title {
   color: var(--white-title-text-color);
-  background-color: var(--background-color-footer);
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8) 80%,
+    rgba(47, 48, 58, 0.8) 80%
+  );
+  /* background-color: var(--background-color-footer); */
   padding-top: 27px;
   padding-bottom: 27px;
 
@@ -248,12 +279,18 @@ ul {
 
 /*team*/
 
+.section.team {
+  background-color: var(--portfolio-button);
+}
 .team .team-item:not(:last-child) {
   margin-right: 30px;
 }
 .team-item {
   width: 270px;
   background-color: var(--white-title-text-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-title {
   color: var(--title-text-color);
@@ -402,6 +439,11 @@ ul {
 .portfolio-item {
   width: 370px;
   border: 1px solid var(--border-color-portfolio);
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .portfolio-list-text {
   padding: 20px 24px;

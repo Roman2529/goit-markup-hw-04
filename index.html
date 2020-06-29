@@ -33,12 +33,11 @@
         </nav>
         <ul class="auth-nav">
           <li class="adress">
-            <a href="info@devstudio.com" class="adress-link"
-              ><img
-                class="adress-logo"
-                src="./img/mail.svg"
-                alt="письмо"
-              />@devstudio.com</a
+            <a href="info@devstudio.com" class="adress-link">
+              <svg class="icon-mail">
+                <use xlink:href="./img/icon/sprite-svg#mail2"></use>
+              </svg>
+              @devstudio.com</a
             >
           </li>
           <li class="adress">
@@ -64,9 +63,9 @@
           <h2 class="section-title visually-hidden">Наши качества</h2>
           <ul class="section-list">
             <li class="advantages-item">
-              <div class="advantages-link">
+              <!-- <div class="advantages-link">
                 <img src="./img/antenna1.svg" alt="антена" />
-              </div>
+              </div> -->
               <h3 class="advantages-item-title">Внимание к деталям</h3>
               <p class="advantages-text">
                 Идейные соображения, а также начало повседневной работы по
@@ -74,9 +73,9 @@
               </p>
             </li>
             <li class="advantages-item">
-              <div class="advantages-link">
+              <!-- <div class="advantages-link">
                 <img src="./img/clock1.svg" alt="часы" />
-              </div>
+              </div> -->
               <h3 class="advantages-item-title">Пунктуальность</h3>
               <p class="advantages-text">
                 Задача организации, в особенности же рамки и место обучения
@@ -84,9 +83,9 @@
               </p>
             </li>
             <li class="advantages-item">
-              <div class="advantages-link">
+              <!-- <div class="advantages-link">
                 <img src="./img/diagram1.svg" alt="диаграмма" />
-              </div>
+              </div> -->
               <h3 class="advantages-item-title">Планирование</h3>
               <p class="advantages-text">
                 Равным образом консультация с широким активом в значительной
@@ -94,9 +93,9 @@
               </p>
             </li>
             <li class="advantages-item">
-              <div class="advantages-link">
+              <!-- <div class="advantages-link">
                 <img src="./img/astronaut1.svg" alt="астронафт" />
-              </div>
+              </div> -->
               <h3 class="advantages-item-title">Современные технологии</h3>
               <p class="advantages-text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -152,7 +151,11 @@
               <p class="team-worker">Frontend Developer</p>
               <ul>
                 <li>
-                  <a href="#" aria-label="Instagram" class="team-link"></a>
+                  <a href="#" aria-label="Instagram" class="team-link">
+                    <svg class="icon">
+                      <use xlink:href="./img/icon/sprite-svg#instagram2"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li><a href="#" aria-label="Twitter" class="team-link"></a></li>
                 <li>
