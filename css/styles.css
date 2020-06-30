@@ -8,6 +8,8 @@
   --portfolio-text: #757575;
   --background-color-footer: #2f303a;
   --border-color-portfolio: #eeeeee;
+  --icon-color: #afb1b8;
+  --background-icon-color: rgba(255, 255, 255, 0.1);
 }
 
 .page {
@@ -21,6 +23,14 @@ ul {
   list-style: none;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: block;
 }
 .section-list {
   display: flex;
@@ -108,7 +118,7 @@ ul {
 .auth-nav .adress-link {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -117,8 +127,18 @@ ul {
   font-size: 14px;
   line-height: 1.14;
 }
-.adress-link.icon-mail {
+
+.svg-item-envelop {
+  width: 15px;
+  height: 15px;
+  fill: var(--primary-text-color);
+  margin-right: 10px;
 }
+
+.adress-link:hover .svg-item-envelop {
+  fill: var(--accent-color);
+}
+
 .adress-link:hover,
 .adress-link:focus {
   color: var(--accent-color);
@@ -200,7 +220,9 @@ ul {
 }
 
 /*advantages*/
-
+.section.advantages {
+  padding-bottom: 0px;
+}
 .advantages .advantages-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -292,19 +314,43 @@ ul {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
 }
+.team-box {
+  padding: 30px 32px 24px;
+}
+.icon-social-link {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+.team-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-title-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.icon-list {
+  padding-left: 0px;
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+}
 .team-title {
   color: var(--title-text-color);
-
-  margin-top: 30px;
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
-.team-link:hover,
-.team-link:focus {
-  color: var(--accent-color);
+.team-link:hover .icon-social-link {
+  fill: var(--white-title-text-color);
+}
+.team-link:hover {
+  background-color: var(--accent-color);
 }
 .team-worker {
   font-size: 16px;
@@ -316,13 +362,37 @@ ul {
 
 /*customers*/
 
-.customers-link:hover,
-.customers-link:focus {
-  color: var(--accent-color);
+.icon-logo {
+  fill: var(--icon-color);
+  width: 88px;
+  height: 45px;
+}
+.section-list.customers-icon {
+  display: flex
+  align-items: center; 
+  justify-content: center; 
 }
 
 .customers .customers-item:not(:last-child) {
   margin-right: 30px;
+}
+.customers-link {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  border: solid 1px;
+  color: inherit;
+  border-radius: 4px;
+}
+.customers-link:hover {
+  color: var(--accent-color);
+}
+.customers-link:hover .icon-logo {
+  fill: var(--accent-color)
+}
+
 }
 
 /*footer*/
@@ -352,9 +422,28 @@ ul {
   width: calc(50% - 15px);
   margin-right: 0px;
 }
-.socials-link:hover,
-.socials-link:focus {
-  color: var(--accent-color);
+.icon-list-footer {
+  padding-left: 0px;
+  display: flex;
+  margin-top: 20px;
+}
+.icon-social-link-footer {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-title-text-color);
+}
+.footer-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.footer-icon-link:hover {
+  background-color: var(--accent-color);
 }
 .footer-adress:hover,
 .footer-adress:focus {
@@ -382,10 +471,6 @@ ul {
   display: inline-block;
   margin-top: 8px;
 }
-.socials-link:hover,
-.socials-link:focus {
-  color: var(--accent-color);
-}
 
 /*portfolio*/
 
@@ -406,7 +491,7 @@ ul {
 .button-item:not(:last-child) {
   margin-right: 8px;
 }
-.buttons {
+.button-portfolio {
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
@@ -414,6 +499,12 @@ ul {
   color: var(--title-text-color);
   background-color: var(--portfolio-button);
   border-style: none;
+}
+.button-portfolio:hover {
+  color: var(--white-title-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .button-link .button-item:not(:last-child) {
@@ -444,6 +535,9 @@ ul {
 .portfolio-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.porfolio-icon-link {
+  padding: 13.8px 12px;
 }
 .portfolio-list-text {
   padding: 20px 24px;
